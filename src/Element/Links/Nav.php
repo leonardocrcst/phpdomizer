@@ -1,8 +1,8 @@
 <?php
 
-namespace phpdomizer\Element\Links;
+namespace Phpdomizer\Element\Links;
 
-use phpdomizer\Basement\Element;
+use Phpdomizer\Basement\Element;
 
 class Nav extends Element
 {

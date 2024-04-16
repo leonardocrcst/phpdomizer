@@ -1,11 +1,11 @@
 <?php
 
-namespace phpdomizer\Element\Links;
+namespace Phpdomizer\Element\Links;
 
-use phpdomizer\Basement\Element;
-use phpdomizer\Common\MediaQuery;
-use phpdomizer\Element\Links\Type\ReferrerPolicy;
-use phpdomizer\Element\Links\Type\Relationship;
+use Phpdomizer\Basement\Element;
+use Phpdomizer\Common\MediaQuery;
+use Phpdomizer\Element\Links\Type\ReferrerPolicy;
+use Phpdomizer\Element\Links\Type\Relationship;
 
 abstract class Links extends Element
 {

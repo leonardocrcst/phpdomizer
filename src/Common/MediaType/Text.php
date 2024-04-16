@@ -1,6 +1,6 @@
 <?php
 
-namespace phpdomizer\Common\MediaType;
+namespace Phpdomizer\Common\MediaType;
 
 enum Text: string
 {

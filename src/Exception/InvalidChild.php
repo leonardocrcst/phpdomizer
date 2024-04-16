@@ -1,9 +1,9 @@
 <?php
 
-namespace phpdomizer\Exception;
+namespace Phpdomizer\Exception;
 
 use Exception;
-use phpdomizer\Basement\Element;
+use Phpdomizer\Basement\Element;
 
 class InvalidChild extends Exception
 {

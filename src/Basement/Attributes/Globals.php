@@ -1,9 +1,10 @@
 <?php
 /** @noinspection PhpUnused */
 
-namespace phpdomizer\Basement\Attributes;
+namespace Phpdomizer\Basement\Attributes;
 
-use phpdomizer\Basement\Classes;
+use Phpdomizer\Basement\Classes;
+use UnitEnum;
 
 trait Globals
 {
@@ -25,7 +26,7 @@ trait Globals
                     $attrs[] = $attr;
                 }
             }
-            if ($value instanceof \UnitEnum && property_exists($value, 'value')) {
+            if ($value instanceof UnitEnum && property_exists($value, 'value')) {
                 $attrs[] = sprintf('%s="%s"', $name, $value->value);
             }
             if (!is_object($value) && !empty($value)) {

@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\Element\Basic;
+namespace Tests\Element\Basic;
 
-use phpdomizer\Element\Basic\Body;
+use Phpdomizer\Element\Basic\Body;
 use PHPUnit\Framework\TestCase;
 
 class BodyTest extends TestCase

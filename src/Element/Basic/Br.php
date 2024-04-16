@@ -1,8 +1,8 @@
 <?php
 
-namespace phpdomizer\Element\Basic;
+namespace Phpdomizer\Element\Basic;
 
-use phpdomizer\Basement\Element;
+use Phpdomizer\Basement\Element;
 
 class Br extends Element
 {

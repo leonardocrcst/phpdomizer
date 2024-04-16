@@ -1,10 +1,10 @@
 <?php
 
-namespace phpdomizer\Element\Links;
+namespace Phpdomizer\Element\Links;
 
-use phpdomizer\Common\MediaType\Image;
-use phpdomizer\Common\MediaType\Text;
-use phpdomizer\Element\Links\Type\Relationship;
+use Phpdomizer\Common\MediaType\Image;
+use Phpdomizer\Common\MediaType\Text;
+use Phpdomizer\Element\Links\Type\Relationship;
 
 class Link extends Links
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace phpdomizer\Basement;
+namespace Phpdomizer\Basement;
 
-use phpdomizer\Basement\Attributes\Globals;
-use phpdomizer\Exception\InvalidChild;
+use Phpdomizer\Basement\Attributes\Globals;
+use Phpdomizer\Exception\InvalidChild;
 
 class Element
 {

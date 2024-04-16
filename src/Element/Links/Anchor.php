@@ -1,9 +1,9 @@
 <?php
 
-namespace phpdomizer\Element\Links;
+namespace Phpdomizer\Element\Links;
 
-use phpdomizer\Common\MediaType\Text;
-use phpdomizer\Element\Links\Type\Target;
+use Phpdomizer\Common\MediaType\Text;
+use Phpdomizer\Element\Links\Type\Target;
 
 class Anchor extends Links
 {

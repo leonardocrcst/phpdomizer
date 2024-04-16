@@ -1,6 +1,6 @@
 <?php
 
-namespace phpdomizer\Element\Links\Type;
+namespace Phpdomizer\Element\Links\Type;
 
 enum Target: string
 {

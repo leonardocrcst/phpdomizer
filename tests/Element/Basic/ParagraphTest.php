@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\Element\Basic;
+namespace Tests\Element\Basic;
 
-use phpdomizer\Element\Basic\Paragraph;
+use Phpdomizer\Element\Basic\Paragraph;
 use PHPUnit\Framework\TestCase;
 
 class ParagraphTest extends TestCase

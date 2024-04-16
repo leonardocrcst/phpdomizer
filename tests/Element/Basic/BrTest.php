@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\Element\Basic;
+namespace Tests\Element\Basic;
 
-use phpdomizer\Element\Basic\Br;
+use Phpdomizer\Element\Basic\Br;
 use PHPUnit\Framework\TestCase;
 
 class BrTest extends TestCase

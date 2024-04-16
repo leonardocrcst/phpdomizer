@@ -1,8 +1,8 @@
 <?php
 
-namespace tests\Element\Basic;
+namespace Tests\Element\Basic;
 
-use phpdomizer\Element\Basic\Head;
+use Phpdomizer\Element\Basic\Head;
 use PHPUnit\Framework\TestCase;
 
 class HeadTest extends TestCase

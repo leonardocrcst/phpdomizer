@@ -1,9 +1,9 @@
 <?php
 
-namespace phpdomizer\Element\Links;
+namespace Phpdomizer\Element\Links;
 
-use phpdomizer\Common\MediaType\Image;
-use phpdomizer\Element\Links\Link;
+use Phpdomizer\Common\MediaType\Image;
+use Phpdomizer\Element\Links\Type\Relationship;
 
 class Icon extends Link
 {
@@ -11,6 +11,6 @@ class Icon extends Link
 
     public function __construct(string $href, Image $type)
     {
-        parent::__construct($href, $type);
+        parent::__construct($href, Relationship::ALTERNATE, $type);
     }
 }

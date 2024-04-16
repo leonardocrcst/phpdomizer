@@ -1,18 +1,18 @@
 <?php
 
-namespace phpdomizer\Basement;
+namespace Phpdomizer\Basement;
 
 class Classes
 {
     private array $classes = [];
 
-    public function add(string ...$names): void
+    public function add(?string ...$names): void
     {
         $classes = [
             ...$this->classes,
             ...$names
         ];
-        $this->classes = array_unique($classes);
+        $this->classes = array_unique(array_filter($classes));
     }
 
     public function __toString(): string

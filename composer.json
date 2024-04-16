@@ -12,8 +12,8 @@
   ],
   "autoload": {
     "psr-4": {
-      "phpdomizer\\": "src/",
-      "tests\\": "tests/"
+      "Phpdomizer\\": "src/",
+      "Tests\\": "tests/"
     }
   },
   "require": {

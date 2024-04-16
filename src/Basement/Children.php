@@ -1,8 +1,8 @@
 <?php
 
-namespace phpdomizer\Basement;
+namespace Phpdomizer\Basement;
 
-use phpdomizer\Exception\InvalidChild;
+use Phpdomizer\Exception\InvalidChild;
 
 trait Children
 {
