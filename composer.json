@@ -3,6 +3,7 @@
   "description": "DOM generation from PHP",
   "version": "0.1.0",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Léo Cruz",
