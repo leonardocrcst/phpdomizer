@@ -1,0 +1,20 @@
+volumes:
+  logs:
+    driver: local
+
+services:
+  phpdomizer:
+    container_name: phpdomizer
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    working_dir: /var/www
+    command: php -S 0.0.0.0:8080 -t public
+    environment:
+      docker: "true"
+    ports:
+      - "8090:8080"
+      - "40280:9003"
+    volumes:
+      - .:/var/www
+      - logs:/var/www/log

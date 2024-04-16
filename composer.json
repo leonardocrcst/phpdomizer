@@ -1,6 +1,7 @@
 {
   "name": "leocruz/phpdomizer",
   "description": "DOM generation from PHP",
+  "version": "0.1.0",
   "type": "library",
   "authors": [
     {
