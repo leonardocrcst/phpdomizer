@@ -5,14 +5,14 @@ namespace Phpdomizer\Component\Materializecss\Util;
 readonly class ColumnSpecs
 {
     public function __construct(
-        public ?int $small = 1,
-        public ?int $medium = 1,
-        public ?int $large = 1,
-        public ?int $extraLarge = 1
+        public ?int $small = null,
+        public ?int $medium = null,
+        public ?int $large = null,
+        public ?int $extraLarge = null
     ) {
     }
 
-    public static function create(?int $small = 1, ?int $medium = 1, ?int $large = 1, ?int $extraLarge = 1): ColumnSpecs
+    public static function create(?int $small = null, ?int $medium = null, ?int $large = null, ?int $extraLarge = null): ColumnSpecs
     {
         return new self(
             $small,
@@ -22,19 +22,39 @@ readonly class ColumnSpecs
         );
     }
 
+    public static function createSmall(int $small): self
+    {
+        return new self($small);
+    }
+
+    public static function createMedium(int $medium): self
+    {
+        return new self(null, $medium);
+    }
+
+    public static function createLarge(int $large): self
+    {
+        return new self(null, null, $large);
+    }
+
+    public static function createExtraLarge(int $extraLarge): self
+    {
+        return new self(null, null, null, $extraLarge);
+    }
+
     public function __toString(): string
     {
         $specs = [];
-        if ($this->small > 0) {
+        if (!empty($this->small)) {
             $specs[] = "s$this->small";
         }
-        if ($this->medium > 0) {
+        if (!empty($this->medium)) {
             $specs[] = "m$this->medium";
         }
-        if ($this->large > 0) {
+        if (!empty($this->large)) {
             $specs[] = "l$this->large";
         }
-        if ($this->extraLarge > 0) {
+        if (!empty($this->extraLarge)) {
             $specs[] = "xl$this->extraLarge";
         }
         return implode(' ', $specs);

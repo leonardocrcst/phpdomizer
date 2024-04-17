@@ -9,6 +9,7 @@ class Col extends Div
 {
     protected ColumnSpecs $columnSpecs;
     protected string $pushOrPull;
+    protected string $offset;
 
     public function __construct(?ColumnSpecs $specs = null)
     {
@@ -31,6 +32,9 @@ class Col extends Div
         if (!empty($this->pushOrPull)) {
             $this->class->add($this->pushOrPull);
         }
+        if(!empty($this->offset)) {
+            $this->class->add($this->offset);
+        }
         return parent::__toString();
     }
 
@@ -42,5 +46,14 @@ class Col extends Div
     public function pull(ColumnSpecs $specs): void
     {
         $this->pushOrPull = sprintf('pull-%s',$specs);
+    }
+
+    public function offset(ColumnSpecs ...$specs): void
+    {
+        $offset = [];
+        foreach ($specs as $spec) {
+            $offset[] = sprintf('offset-%s', $spec);
+        }
+        $this->offset = implode(' ', $offset);
     }
 }
