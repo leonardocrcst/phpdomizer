@@ -4,6 +4,7 @@ namespace Tests\Element\Basic;
 
 use Phpdomizer\Element\Basic\Meta;
 use Phpdomizer\Element\Basic\Type\HttpEquiv;
+use Phpdomizer\Element\Basic\Type\MetaName;
 use Phpdomizer\Element\Basic\Type\MetaType;
 use PHPUnit\Framework\TestCase;
 
@@ -19,6 +20,13 @@ class MetaTest extends TestCase
     {
         $equiv = new Meta(MetaType::HTTP_EQUIV, HttpEquiv::REFRESH);
         $equiv->content(0, 'url=https://google.com');
-        $this->assertEquals('<meta http-equiv="refresh" content="0; url=https://google.com"/>', (string) $equiv);
+        $this->assertEquals('<meta content="0; url=https://google.com" http-equiv="refresh">', (string) $equiv);
+    }
+
+    public function testCreateMetaName()
+    {
+        $name = new Meta(MetaType::NAME, MetaName::AUTHOR);
+        $name->content('Teste');
+        $this->assertEquals('<meta content="Teste" name="author">', (string) $name);
     }
 }

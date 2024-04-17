@@ -9,7 +9,7 @@ class InvalidChild extends Exception
 {
     public function __construct(Element|string $element)
     {
-        $name = is_object($element) && property_exists($element, 'name') ? $element->name : $element;
+        $name = is_object($element) && property_exists($element, 'tagname') ? $element->tagname : $element;
         parent::__construct("$name is not a valid child.");
     }
 }

@@ -15,16 +15,16 @@ class Meta extends Element
     public ?string $content = null;
     public ?string $charset = null;
     public ?string $http_equiv = null;
-    public ?string $_name = null;
+    public ?string $name = null;
 
     public function __construct(MetaType $type, HttpEquiv|MetaName|string $content)
     {
         parent::__construct("meta", true);
-        if (HttpEquiv::isHttpEquiv($type)) {
+        if ($content instanceof HttpEquiv) {
             $this->http_equiv = $content->value;
         }
-        if (MetaName::isMetaName($type)) {
-            $this->_name = $content->value;
+        if ($content instanceof MetaName) {
+            $this->name = $content->value;
         }
         if ($type === MetaType::CHARSET && is_string($content)) {
             $this->charset = $content;

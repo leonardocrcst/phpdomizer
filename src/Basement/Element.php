@@ -11,7 +11,7 @@ class Element
     use Children;
 
     public function __construct(
-        public readonly string $name,
+        public readonly string $tagname,
         protected ?bool $opening = false
     ) {
         $this->class = new Classes();
@@ -22,7 +22,7 @@ class Element
      */
     public function __toString(): string
     {
-        $element = sprintf("<%s", $this->name);
+        $element = sprintf("<%s", $this->tagname);
         $attributes = $this->getAttributesAsString();
         if (!empty($attributes)) {
             $element .= " $attributes";
@@ -32,7 +32,7 @@ class Element
             if ($this->hasChildren()) {
                 $element .= $this->getChildrenAsString();
             }
-            $element .= sprintf("</%s>", $this->name);
+            $element .= sprintf("</%s>", $this->tagname);
         }
         return $element;
     }

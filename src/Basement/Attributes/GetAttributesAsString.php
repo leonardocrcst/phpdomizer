@@ -7,7 +7,7 @@ use UnitEnum;
 trait GetAttributesAsString
 {
     protected array $ignore = [
-        'name',
+        'tagname',
         'opening',
         'ignore',
         'children'
@@ -39,6 +39,8 @@ trait GetAttributesAsString
                 };
             }
         }
-        return count($attrs) ? implode(' ', $attrs) : null;
+        return count($attrs)
+            ? str_replace('_', '-', implode(' ', $attrs))
+            : null;
     }
 }

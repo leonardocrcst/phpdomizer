@@ -12,9 +12,15 @@ class DefinitionList extends Element
         $this->class->add($class);
     }
 
-    public function definition(DefinitionTerm $term, DefinitionDescription $definitionDescription): DefinitionDescription
+    public function definition(DefinitionTerm|string $term, DefinitionDescription|string $definitionDescription): DefinitionDescription
     {
-        $this->add($term, $definitionDescription);
-        return $definitionDescription;
+        $dt = is_string($term)
+            ? new DefinitionTerm($term)
+            : $term;
+        $dd = is_string($definitionDescription)
+            ? new DefinitionDescription($definitionDescription)
+            : $definitionDescription;
+        $this->add($dt, $dd);
+        return $dd;
     }
 }

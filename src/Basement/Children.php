@@ -14,7 +14,9 @@ trait Children
             ...$this->children,
             ...$child
         ]);
-        return $this->children[count($this->children) - 1];
+        return count($this->children)
+            ? $this->children[count($this->children) - 1]
+            : null;
     }
 
     public function hasChildren(): bool
