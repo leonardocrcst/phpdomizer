@@ -10,7 +10,8 @@ trait GetAttributesAsString
         'tagname',
         'opening',
         'ignore',
-        'children'
+        'children',
+        'comment'
     ];
 
     protected function getAttributesAsString(): ?string

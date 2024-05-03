@@ -9,6 +9,7 @@ class Element
 {
     use Globals;
     use Children;
+    use Comment;
 
     public function __construct(
         public readonly string $tagname,
@@ -22,7 +23,10 @@ class Element
      */
     public function __toString(): string
     {
-        $element = sprintf("<%s", $this->tagname);
+        $element = sprintf(
+            "%s<%s",
+            $this->hasComment() ? $this->getCommnet() : null,
+            $this->tagname);
         $attributes = $this->getAttributesAsString();
         if (!empty($attributes)) {
             $element .= " $attributes";
@@ -33,6 +37,10 @@ class Element
                 $element .= $this->getChildrenAsString();
             }
             $element .= sprintf("</%s>", $this->tagname);
+        }
+        if ($this->commentAll) {
+            $this->setCommnet($element);
+            return $this->getCommnet();
         }
         return $element;
     }
