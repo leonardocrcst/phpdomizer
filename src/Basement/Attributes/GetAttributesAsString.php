@@ -6,18 +6,12 @@ use UnitEnum;
 
 trait GetAttributesAsString
 {
-    protected array $ignore = [
-        'tagname',
-        'opening',
-        'ignore',
-        'children',
-        'comment'
-    ];
+    use IgnoreThis;
 
     protected function getAttributesAsString(): ?string
     {
         $attrs = [];
-        foreach (get_class_vars(self::class) as $name => $value) {
+        foreach (get_object_vars($this) as $name => $value) {
             if (in_array($name, $this->ignore)) {
                 continue;
             }
@@ -34,7 +28,7 @@ trait GetAttributesAsString
             if (!is_object($value) && !empty($value)) {
                 $attrs[] = match ($value) {
                     is_bool($value) => $name,
-                    is_numeric($value) => "$name=$value",
+                    is_numeric($value) || is_int($value) => "$name=$value",
                     is_array($value) => sprintf('%s="%s"', $name, implode(' ', $value)),
                     default => "$name=\"$value\"",
                 };

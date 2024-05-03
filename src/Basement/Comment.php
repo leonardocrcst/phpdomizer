@@ -5,14 +5,14 @@ namespace Phpdomizer\Basement;
 trait Comment
 {
     protected string $comment;
-    protected bool $commentAll;
+    protected bool $commentAll = false;
 
-    public function setCommnet(string $comment): void
+    public function setComment(string $comment): void
     {
         $this->comment = $comment;
     }
 
-    public function getCommnet(): string
+    public function getComment(): string
     {
         return "<!-- $this->comment -->";
     }

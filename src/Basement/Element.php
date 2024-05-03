@@ -25,7 +25,7 @@ class Element
     {
         $element = sprintf(
             "%s<%s",
-            $this->hasComment() ? $this->getCommnet() : null,
+            $this->hasComment() ? $this->getComment() : null,
             $this->tagname);
         $attributes = $this->getAttributesAsString();
         if (!empty($attributes)) {
@@ -39,8 +39,8 @@ class Element
             $element .= sprintf("</%s>", $this->tagname);
         }
         if ($this->commentAll) {
-            $this->setCommnet($element);
-            return $this->getCommnet();
+            $this->setComment($element);
+            return $this->getComment();
         }
         return $element;
     }
