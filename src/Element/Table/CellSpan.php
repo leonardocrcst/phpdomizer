@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpdomizer\Table;
+namespace Phpdomizer\Element\Table;
 
 trait CellSpan
 {

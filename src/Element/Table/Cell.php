@@ -1,9 +1,9 @@
 <?php
 
-namespace Phpdomizer\Table;
+namespace Phpdomizer\Element\Table;
 
 use Phpdomizer\Basement\Element;
-use Phpdomizer\Table\Type\CellType;
+use Phpdomizer\Element\Table\Type\CellType;
 
 class Cell extends Element
 {

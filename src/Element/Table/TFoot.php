@@ -1,15 +1,15 @@
 <?php
 
-namespace Phpdomizer\Table;
+namespace Phpdomizer\Element\Table;
 
 use Phpdomizer\Basement\Element;
-use Phpdomizer\Table\Type\CellType;
+use Phpdomizer\Element\Table\Type\CellType;
 
-class TBody extends Element
+class TFoot extends Element
 {
     public function __construct(?string $class = null)
     {
-        parent::__construct("tbody");
+        parent::__construct("tfoot");
         $this->class->add($class);
     }
 

@@ -2,9 +2,9 @@
 
 namespace Tests\Table;
 
-use Phpdomizer\Table\Cell;
-use Phpdomizer\Table\Table;
-use Phpdomizer\Table\Type\CellType;
+use Phpdomizer\Element\Table\Cell;
+use Phpdomizer\Element\Table\Table;
+use Phpdomizer\Element\Table\Type\CellType;
 use PHPUnit\Framework\TestCase;
 
 class TableTest extends TestCase

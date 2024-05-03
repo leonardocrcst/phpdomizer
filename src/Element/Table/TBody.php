@@ -1,21 +1,21 @@
 <?php
 
-namespace Phpdomizer\Table;
+namespace Phpdomizer\Element\Table;
 
 use Phpdomizer\Basement\Element;
-use Phpdomizer\Table\Type\CellType;
+use Phpdomizer\Element\Table\Type\CellType;
 
-class THead extends Element
+class TBody extends Element
 {
     public function __construct(?string $class = null)
     {
-        parent::__construct("thead");
+        parent::__construct("tbody");
         $this->class->add($class);
     }
 
     public function row(?string $class = null): Tr
     {
-        $tr = new Tr(CellType::Head, $class);
+        $tr = new Tr(CellType::Body, $class);
         parent::add($tr);
         return $tr;
     }

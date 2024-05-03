@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpdomizer\Table\Type;
+namespace Phpdomizer\Element\Table\Type;
 
 enum CellType: string
 {
