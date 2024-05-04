@@ -3,7 +3,7 @@
 namespace Phpdomizer\Element\Links;
 
 use Phpdomizer\Common\MediaType\Text;
-use Phpdomizer\Element\Links\Type\Target;
+use Phpdomizer\Common\Target;
 
 class Anchor extends Links
 {
