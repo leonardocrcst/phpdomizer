@@ -2,14 +2,16 @@
 
 namespace Phpdomizer\Basement;
 
+use Phpdomizer\Basement\Attributes\DataAttributes;
 use Phpdomizer\Basement\Attributes\Globals;
 use Phpdomizer\Exception\InvalidChild;
 
-class Element
+abstract class Element
 {
     use Globals;
     use Children;
     use Comment;
+    use DataAttributes;
 
     public function __construct(
         public readonly string $tagname,
@@ -30,6 +32,10 @@ class Element
         $attributes = $this->getAttributesAsString();
         if (!empty($attributes)) {
             $element .= " $attributes";
+        }
+        $dataAttributes = $this->getDataAttributesAsString();
+        if (!empty($dataAttributes)) {
+            $element .= " $dataAttributes";
         }
         $element .= ">";
         if (!$this->opening) {

@@ -18,5 +18,6 @@ trait IgnoreThis
         'foot',
         'columnSpecs',
         'offset',
+        'data',
     ];
 }
