@@ -21,7 +21,7 @@ class RedText extends Color
     public static function accent(Element $element, int $deep = 1): Element
     {
         self::setColor();
-        return parent::lighten($element, $deep);
+        return parent::accent($element, $deep);
     }
 
     public static function lighten(Element $element, int $deep = 1): Element

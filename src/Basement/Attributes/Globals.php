@@ -15,4 +15,5 @@ trait Globals
     public ?string $id = null;
     public ?string $dir = null;
     public ?string $lang = null;
+    public ?string $title = null;
 }

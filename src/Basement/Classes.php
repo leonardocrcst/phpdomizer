@@ -15,6 +15,15 @@ class Classes
         $this->classes = array_unique(array_filter($classes));
     }
 
+    public function rem(string ...$classes): void
+    {
+        $this->classes = array_filter($this->classes, function (string $class) use ($classes) {
+            if (!in_array($class, $classes)) {
+                return true;
+            }
+        });
+    }
+
     public function __toString(): string
     {
         return count($this->classes)
