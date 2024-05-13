@@ -1,7 +1,8 @@
 <?php
 
-namespace Phpdomizer\Element\Links;
+namespace Tests\Element\Links;
 
+use Phpdomizer\Element\Links\Anchor;
 use PHPUnit\Framework\TestCase;
 
 class AnchorTest extends TestCase

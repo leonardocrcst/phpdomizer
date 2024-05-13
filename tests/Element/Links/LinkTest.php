@@ -2,8 +2,8 @@
 
 namespace Tests\Element\Links;
 
-use Phpdomizer\Element\Links\Link;
-use Phpdomizer\Element\Links\Type\Relationship;
+use Tests\Element\Links\Link;
+use Tests\Element\Links\Type\Relationship;
 use PHPUnit\Framework\TestCase;
 
 class LinkTest extends TestCase
