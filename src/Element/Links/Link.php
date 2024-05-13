@@ -17,5 +17,6 @@ class Link extends Links
         parent::__construct('link', true);
         $this->rel = $relationship;
         $this->type = $type;
+        $this->href = $href;
     }
 }
