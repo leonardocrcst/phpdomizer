@@ -14,7 +14,9 @@ class Anchor extends Links
 
     public function __construct(mixed $content, ?string $href = null)
     {
+        //todo resolver a substituição de _blank por -blank (e correspondentes)
         parent::__construct('a');
+        $this->href = $href;
         $this->add($content);
     }
 }
