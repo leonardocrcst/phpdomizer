@@ -1,5 +1,5 @@
 {
-  "name": "leocruz/phpdomizer",
+  "name": "leonardocrcst/phpdomizer",
   "description": "DOM generation from PHP",
   "type": "library",
   "license": "MIT",
@@ -11,12 +11,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Phpdomizer\\": "src/"
+      "Leonardocrcst\\Phpdomizer\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "tests/"
+      "Leonardocrcst\\Tests\\": "tests/"
     }
   },
   "require": {
