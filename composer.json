@@ -11,12 +11,16 @@
   ],
   "autoload": {
     "psr-4": {
-      "Phpdomizer\\": "src/",
+      "Phpdomizer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "Tests\\": "tests/"
     }
   },
   "require": {
-    "php": "^8.3"
+    "php": ">=8.3"
   },
   "minimum-stability": "dev",
   "require-dev": {
